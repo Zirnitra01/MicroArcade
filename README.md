@@ -1,2 +1,2 @@
 # MicroArcade
-A project for the experimental microcontrollers course.
+Um projeto feito para o componente curricular de microcontroladores experimental.
