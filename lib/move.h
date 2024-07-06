@@ -12,16 +12,16 @@
 #include "collider.h"
 #include "vector.h"
 
-//As seguintes funções são responsáveis por movimentar os vetores nas direções indicadas
+//As seguintes funÃ§Ãµes sÃ£o responsÃ¡veis por movimentar os vetores nas direÃ§Ãµes indicadas
 void up(unsigned int *vet);
 void down(unsigned int *vet);
 void right(unsigned int *vet);
 void left(unsigned int *vet);
 
-//Responsável pela movimentação das peças rotacionadas do tetris
+//ResponsÃ¡vel pela movimentaÃ§Ã£o das peÃ§as rotacionadas do tetris
 void deslAuto(unsigned int *vet, unsigned int *vetRef, int x, int y);
 
-//Responsável pela movimentação da bola nos jogos pong e breakout
+//ResponsÃ¡vel pela movimentaÃ§Ã£o da bola nos jogos pong e breakout
 void ballMov(char pX, char pY, char dirX, char dirY,unsigned int *vet);
 
 //Move os segmentos da cobra no snake
