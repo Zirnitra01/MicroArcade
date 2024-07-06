@@ -14,7 +14,7 @@
 #include "config.h"
 #include <util/delay.h>
 
-//Manda informações serialmente para as matrizes
+//Manda informaÃ§Ãµes serialmente para as matrizes
 void mandaComando(unsigned char addrs, unsigned int data);
 
 //Inicializa o display
