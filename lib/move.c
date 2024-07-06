@@ -8,7 +8,7 @@
 
 #include "move.h"
 
-//As seguintes funções são responsáveis por movimentar os vetores nas direções indicadas
+//As seguintes funÃ§Ãµes sÃ£o responsÃ¡veis por movimentar os vetores nas direÃ§Ãµes indicadas
 void up(unsigned int *vet){
 	vet[9]--;
 	for(int i=0; i<8; i++){
@@ -36,7 +36,7 @@ void left(unsigned int *vet){
 	vet[7] = temp;
 }
 
-//Responsável pela movimentação das peças rotacionadas do tetris
+//ResponsÃ¡vel pela movimentaÃ§Ã£o das peÃ§as rotacionadas do tetris
 void deslAuto(unsigned int *vet, unsigned int *vetRef, int x, int y){
 	if(x>vet[8]){
 		for(int i=vet[8]; i<x; i++){
@@ -60,7 +60,7 @@ void deslAuto(unsigned int *vet, unsigned int *vetRef, int x, int y){
 	}
 }
 
-//Responsável pela movimentação da bola nos jogos pong e breakout
+//ResponsÃ¡vel pela movimentaÃ§Ã£o da bola nos jogos pong e breakout
 void ballMov(char pX, char pY, char dirX, char dirY,unsigned int *vet){
 	if(dirX==1){
 		for(int i=0;i<pX;i++){right(vet);}
@@ -79,10 +79,10 @@ void ballMov(char pX, char pY, char dirX, char dirY,unsigned int *vet){
 //Move os segmentos da cobra no snake
 void moveSnake(unsigned int *vet, int nSeg, int dir, int sent, unsigned char anterior[][2]){
 	//vet -> vetor em que a cobrinha se move
-	//nSeg -> número de segmentos da cobrinha
+	//nSeg -> nÃºmero de segmentos da cobrinha
 	//dir -> 0 para X e 1 para Y
 	//sent -> 1 para baixo ou direita e -1 para cima ou esquerda
-	//anterior -> vetor de posições anteriores dos segmentos
+	//anterior -> vetor de posiÃ§Ãµes anteriores dos segmentos
 	for(int i=0; i<nSeg; i++){
 		desligaLED(vet,anterior[i][0],anterior[i][1]);
 	}
