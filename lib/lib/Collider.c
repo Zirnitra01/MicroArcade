@@ -7,7 +7,7 @@
 
 #include "collider.h"
 
-//As funções de colisão Wall detectam quando há alguma colisão entre o objeto e o limite da matriz
+//As funÃ§Ãµes de colisÃ£o Wall detectam quando hÃ¡ alguma colisÃ£o entre o objeto e o limite da matriz
 char colisaoInferiorWall(unsigned int *vet){
 	char colisao = 0;
 	for(int i=0; i<8; i++){
@@ -45,7 +45,7 @@ char colisaoEsquerdaWall(unsigned int *vet){
 	return colisao;
 }
 
-//As funções de colisão Ref detectam quando há alguma colisão entre os dois objetos
+//As funÃ§Ãµes de colisÃ£o Ref detectam quando hÃ¡ alguma colisÃ£o entre os dois objetos
 char colisaoInferiorRef(unsigned int *vet, unsigned int *vet_ref){
 	char colisao = 0;
 	for(int i=0; i<8; i++){
