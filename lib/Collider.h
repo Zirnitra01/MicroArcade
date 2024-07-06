@@ -11,13 +11,13 @@
 
 #include <avr/io.h>
 
-//As funções de colisão Wall detectam quando há alguma colisão entre o objeto e o limite da matriz
+//As funÃ§Ãµes de colisÃ£o Wall detectam quando hÃ¡ alguma colisÃ£o entre o objeto e o limite da matriz
 char colisaoInferiorWall(unsigned int *vet);
 char colisaoSuperiorWall(unsigned int *vet);
 char colisaoDireitaWall(unsigned int *vet);
 char colisaoEsquerdaWall(unsigned int *vet);
 
-//As funções de colisão Ref detectam quando há alguma colisão entre os dois objetos
+//As funÃ§Ãµes de colisÃ£o Ref detectam quando hÃ¡ alguma colisÃ£o entre os dois objetos
 char colisaoInferiorRef(unsigned int *vet, unsigned int *vet_ref);
 char colisaoSuperiorRef(unsigned int *vet, unsigned int *vet_ref);
 char colisaoDireitaRef(unsigned int *vet, unsigned int *vet_ref);
