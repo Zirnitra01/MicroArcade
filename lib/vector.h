@@ -14,7 +14,7 @@
 //Rotaciona o vetor para ficar melhor apresentado na matriz
 void rotacionaVetor(unsigned int *vet, unsigned int *rotVet);
 
-//As seguintes funções tem como objetivo manipular os vetores durante os jogos
+//As seguintes funÃ§Ãµes tem como objetivo manipular os vetores durante os jogos
 void unirVetores(unsigned int *vet1, unsigned int *vet2, unsigned int *vet_res);
 void atribuirVetores(unsigned int *vet_res, unsigned int *vet);
 void limparVetores(unsigned int *vet_res, int slots);
