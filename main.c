@@ -1,5 +1,4 @@
 //Inclusão das bibliotecas utilizadas
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdlib.h>
@@ -33,7 +32,8 @@ unsigned int menuImg[8][8] = {
 	{0,0x3C00,0xA400,0x24C8,0x2480,0x480,0x780,0},
 	{0x3FC0,0x3FE0,0x3FE1,0xBFC1,0x3F81,0x3F08,0x3FC0,0x3FE0},
 	{0x6E14,0x48D1,0x5A8B,0x5AE8,0xC22A,0x7EBA,0x4003,0x5FF5}};
-	
+
+//Peças para o Tetris
 unsigned int fig[7][4][10] = {
 	{{0,0,0x4000,0xC000,0x4000,0,0,0,4,2},{0,0,0,0xE000,0x4000,0,0,0,4,2},{0,0,0x4000,0x6000,0x4000,0,0,0,4,2},{0,0,0x4000,0xE000,0,0,0,0,4,2}},//"T"
 	{{0,0,0x4000,0x4000,0xC000,0,0,0,4,2},{0,0,0,0xE000,0x2000,0,0,0,4,2},{0,0,0x6000,0x4000,0x4000,0,0,0,4,2},{0,0,0x8000,0xE000,0,0,0,0,4,2}},//"L"
@@ -47,7 +47,8 @@ unsigned int res[8] = {0};
 unsigned int pec[10];
 unsigned int imp[8] = {0};
 unsigned int endGame[8] = {0};
-		
+
+//Ordem das peças para o tetris
 unsigned int lista[30] = {3,2,1,6,4,0,3,2,5,1,0,6,4,3,5,2,0,1,4,6,3,5,2,0,4,1,6,3,5,2};//Talvez eu remova a lista caso eu use os valores aleatórios
 
 //Definição das variáveis que são usados nos jogos
@@ -55,10 +56,9 @@ unsigned int lista[30] = {3,2,1,6,4,0,3,2,5,1,0,6,4,3,5,2,0,1,4,6,3,5,2,0,4,1,6,
 
 //O aux1 atribui alguns valores no início dos jogos
 char aux1 = 0;
-
 char aux2 = 1;
 
-int gameMode = TETRIS;
+int gameMode = 0;
 int gameState = GAMEOVER;
 
 int dirX = 1;
@@ -316,7 +316,8 @@ void snake(){
 		dirX = 2;
 		dirY = 0;
 	}	
-			
+
+	//Verifica se o jogador pegou a comida
 	if(snakeHead[8] == posX && snakeHead[9] == posY){
 		segment++;
 		desligaLED(pec,posX,posY);
@@ -381,8 +382,7 @@ void breakout(){
 		dirX^=1;
 	}
 	
-	//Ainda falta adicionar as colisões nas outras direções
-	//E fazer o jogador perder quando a bolinha tocar a parte inferior	
+	//Ainda falta adicionar as colisões nas outras direções e fazer o jogador perder quando a bolinha tocar a parte inferior	
 		
 	ballMov(posX,posY,dirX,dirY,pec);
 	
@@ -407,6 +407,7 @@ void breakout(){
 	}	
 }
 
+//Preciso trocar a imagem dele no menu
 void minesWeeper(){
 	if(aux1 == 0){
 		contRot = 1;
@@ -479,6 +480,8 @@ void minesWeeper(){
 	contRot = 1;
 }
 
+//Os proximos são apenas testes
+
 //Move os segmentos dos projéteis no spaceInvaders
 void moveBullet(unsigned int *vet, int nSeg, unsigned char anterior[][2]){
 	//vet -> vetor em que a cobrinha se move
@@ -496,7 +499,6 @@ void moveBullet(unsigned int *vet, int nSeg, unsigned char anterior[][2]){
 		ligaLED(vet,anterior[i][0],anterior[i][1]);
 	}
 }
-
 void spaceInvaders(){
 	if (aux1 == 0){
 		aux1 = 1;
@@ -624,7 +626,7 @@ ISR(TIMER0_OVF_vect){
 		moveTimer++;
 		if(moveTimer>=maxMoveTime){
 			moveTimer=0;
-			if(colisaoInferiorWall(pec)==0 && colisaoInferiorRef(pec,res) == 0){contReg = 0;down(pec);}
+			if(colisaoInferiorWall(pec)==0 && colisaoInferiorRef(pec,res) == 0){contReg = 0; down(pec);}
 		}
 		if(colisaoInferiorRef(pec,res) != 0 || colisaoInferiorWall(pec) != 0){
 			contReg++;
@@ -660,6 +662,7 @@ ISR(TIMER0_OVF_vect){
 			if(colisaoInferiorRef(pec,res) == 0 && colisaoInferiorWall(pec) == 0){down(pec);}
 		}
 	}
+	//Tentei fazer atela piscar quando o jogo estivesse pausado 
 	/*if(gameState == PAUSE){
 		moveTimer++;
 		if(moveTimer >= maxMoveTime){
@@ -667,6 +670,7 @@ ISR(TIMER0_OVF_vect){
 			move^=1;
 		}
 	}*/
+	//O tick limita a velocidade dos jogos
 	if(tick == 0){tickSpeed++;}
 	if(tickSpeed >= maxTick){
 		tick = 1;
@@ -679,7 +683,7 @@ int main(void){
 	//Inicializa a matriz
 	inicializa();
 	
-	//Configuração das entradas em pull-up
+	//Configuração das entradas (botões) em pull-up
 	PORTD|=(1<<3)|(1<<4)|(1<<5)|(1<<6)|(1<<7);
 	PORTB|=(1<<0)|(1<<6)|(1<<7);
 	
@@ -723,7 +727,7 @@ ISR(TIMER2_OVF_vect){
 	PORTB^=(1<<1);
 }
 
-//Função principal onde são feitas as configurações e onde está o loop do jogo
+
 int main(void){
 	int x, int y
 	//Configuração da saída de audio
