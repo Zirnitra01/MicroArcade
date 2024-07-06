@@ -7,7 +7,7 @@
 
 #include "vector.h"
 
-//Rotaciona o vetor para ficar melhor apresentado na matriz do circuito n· pr·tica
+//Rotaciona o vetor para ficar melhor apresentado na matriz do circuito n√° pr√°tica
 void rotacionaVetor(unsigned int *vet, unsigned int *rotVet){
 	unsigned char tempVet[16] = {0};
 	for(int i=0; i<16; i++){
@@ -18,7 +18,7 @@ void rotacionaVetor(unsigned int *vet, unsigned int *rotVet){
 	for(int i=0; i<8; i++){rotVet[i] = (tempVet[i+8]<<8)|tempVet[i];}
 }
 
-//As seguintes funÁıes tem como objetivo manipular os vetores durante os jogos
+//As seguintes fun√ß√µes tem como objetivo manipular os vetores durante os jogos
 void unirVetores(unsigned int *vet1, unsigned int *vet2, unsigned int *vet_res){
 	for(int i=0; i<8; i++){vet_res[i] = vet1[i]|vet2[i];}
 }
