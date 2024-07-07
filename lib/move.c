@@ -1,11 +1,3 @@
-/*
- * move.c
- *
- * Created: 06/06/2024 14:00:55
- *  Author: Douglas Pasini
- */ 
-
-
 #include "move.h"
 
 //As seguintes funções são responsáveis por movimentar os vetores nas direções indicadas
