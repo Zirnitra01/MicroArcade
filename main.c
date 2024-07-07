@@ -151,8 +151,8 @@ void tetris(){
 		aux1 = 1;
 		atribuirVetores(pec,fig[lista[numList]][contRot]);
 		for(int i=0; i<5 && colisaoSuperiorWall(pec)==0; i++){up(pec);}
-		posX = 0;
-		posY = 0;
+		posX = pec[8];
+		posY = pec[9];
 		maxTick = 150;
 		maxMoveTime = 900;
 		maxContReg = 1000;
@@ -192,8 +192,8 @@ void tetris(){
 	}
 	
 	//Salva a posição do centro das peças 
-	posX=pec[8];
-	posY=pec[9];	
+	posX = pec[8];
+	posY = pec[9];	
 	
 	//Rotaciona as peças em queda
 	if(B_ACTION == 0){
