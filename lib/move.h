@@ -1,10 +1,3 @@
-/*
- * move.h
- *
- * Created: 06/06/2024 14:01:08
- *  Author: Douglas Pasini
- */ 
-
 #ifndef MOVE_H_
 #define MOVE_H_
 
