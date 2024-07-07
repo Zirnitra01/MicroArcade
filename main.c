@@ -328,7 +328,7 @@ void snake(){
 	if(snakeHead[8] > 8 || snakeHead[8] < 1 || snakeHead[9] > 16 || snakeHead[9] < 1 || (colisaoEsquerdaRef(snakeHead,snakeVet) == 1 && dirX == 0) || (colisaoDireitaRef(snakeHead,snakeVet) == 1 && dirX == 1) || (colisaoSuperiorRef(snakeHead,snakeVet) == 1 && dirY == 1) || (colisaoInferiorRef(snakeHead,snakeVet) == 1 && dirY == 0)){
 		gameState = GAMEOVER;
 	}
-	//Testar a posição do snakeHead para não dar problema	
+
 	if(dirY == 0){moveSnake(snakeVet,segment,1,1,posAnterior);down(snakeHead);}//down
 	if(dirY == 1){moveSnake(snakeVet,segment,1,-1,posAnterior);up(snakeHead);}//up
 	if(dirX == 0){moveSnake(snakeVet,segment,0,-1,posAnterior);left(snakeHead);}//left
