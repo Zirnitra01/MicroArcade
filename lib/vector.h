@@ -1,11 +1,3 @@
-/*
- * vector.h
- *
- * Created: 12/06/2024 18:14:18
- *  Author: Douglas Pasini
- */ 
-
-
 #ifndef VECTOR_H_
 #define VECTOR_H_
 
