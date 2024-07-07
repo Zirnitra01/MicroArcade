@@ -212,8 +212,6 @@ void tetris(){
 void pong(){
 	if(aux1 == 0){
 		aux1 = 1;
-		posX = 1;
-		posY = 1;
 		dirY = 0;
 		dirX = 1;
 		aux2 = 1;
@@ -231,7 +229,7 @@ void pong(){
 	mandaImagem(imp);
 	
 	if(aux2 == 0){
-		ballMov(posX,posY,dirX,dirY,pec);
+		ballMov(1,1,dirX,dirY,pec);
 	}
 	
 	if(colisaoEsquerdaWall(pec) == 1 || colisaoDireitaWall(pec) == 1){
@@ -344,8 +342,6 @@ void snake(){
 void breakout(){
 	if(aux1 == 0){
 		aux1 = 1;
-		posX = 1;
-		posY = 1;
 		dirY = 0;
 		dirX = 0;
 		atribuirVetores(pec,ball);
@@ -385,7 +381,7 @@ void breakout(){
 	
 	//Ainda falta adicionar as colisões nas outras direções e fazer o jogador perder quando a bolinha tocar a parte inferior	
 		
-	ballMov(posX,posY,dirX,dirY,pec);
+	ballMov(1,1,dirX,dirY,pec);
 	
 	if(colisaoEsquerdaWall(pec) == 1 || colisaoDireitaWall(pec) == 1){
 		dirX^=1;
@@ -481,7 +477,7 @@ void minesWeeper(){
 	contRot = 1;
 }
 
-//Os proximos são apenas testes
+//Os proximos jogos são apenas testes
 
 //Move os segmentos dos projéteis no spaceInvaders
 void moveBullet(unsigned int *vet, int nSeg, unsigned char anterior[][2]){
@@ -535,7 +531,6 @@ void spaceInvaders(){
 	}	
 }
 
-//Por enquanto eu uso essa parte para testes
 unsigned int stairs[2][8]={{0,0,0x2,0x2,0xA,0xA,0x2A,0x2A},{0,0x2,0x2,0xA,0xA,0x2A,0x2A,0x2A}};
 
 //Tentei criar uma gravidade
@@ -627,7 +622,7 @@ ISR(TIMER0_OVF_vect){
 		moveTimer++;
 		if(moveTimer>=maxMoveTime){
 			moveTimer=0;
-			if(colisaoInferiorWall(pec)==0 && colisaoInferiorRef(pec,res) == 0){contReg = 0; down(pec);}
+			if(colisaoInferiorWall(pec) == 0 && colisaoInferiorRef(pec,res) == 0){contReg = 0; down(pec);}
 		}
 		if(colisaoInferiorRef(pec,res) != 0 || colisaoInferiorWall(pec) != 0){
 			contReg++;
