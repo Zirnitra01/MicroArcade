@@ -1,10 +1,3 @@
-/*
- * vector.c
- *
- * Created: 12/06/2024 18:14:03
- *  Author: Douglas Pasini
- */ 
-
 #include "vector.h"
 
 //Rotaciona o vetor para ficar melhor apresentado na matriz do circuito ná prática
