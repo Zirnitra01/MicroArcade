@@ -1,11 +1,3 @@
-/*
- * Collider.h
- *
- * Created: 06/06/2024 13:11:10
- *  Author: Douglas Pasini
- */ 
-
-
 #ifndef COLLIDER_H_
 #define COLLIDER_H_
 
