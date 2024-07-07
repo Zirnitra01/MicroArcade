@@ -1,11 +1,3 @@
-/*
- * matrix.h
- *
- * Created: 16/06/2024 14:20:17
- *  Author: Douglas Pasini
- */ 
-
-
 #ifndef MATRIX_H_
 #define MATRIX_H_
 
