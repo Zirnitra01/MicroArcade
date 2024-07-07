@@ -1,11 +1,3 @@
-/*
- * config.h
- *
- * Created: 16/06/2024 14:28:08
- *  Author: Douglas Pasini
- */ 
-
-
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
