@@ -1,10 +1,3 @@
-/*
- * Collider.c
- *
- * Created: 06/06/2024 13:11:01
- *  Author: Douglas Pasini
- */ 
-
 #include "collider.h"
 
 //As funções de colisão Wall detectam quando há alguma colisão entre o objeto e o limite da matriz
