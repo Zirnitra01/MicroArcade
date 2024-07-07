@@ -52,8 +52,10 @@ void deslAuto(unsigned int *vet, unsigned int *vetRef, int x, int y){
 	}
 }
 
-//Responsável pela movimentação da bola nos jogos pong e breakout
+//Responsável pela movimentação da bolinha nos jogos pong e breakout
 void ballMov(char pX, char pY, char dirX, char dirY,unsigned int *vet){
+	//pX e pY controlam se a bolinha se move em linha reta ou na diagonal
+	//dirX e dirY controlam a direção da bolinha
 	if(dirX==1){
 		for(int i=0;i<pX;i++){right(vet);}
 	}
