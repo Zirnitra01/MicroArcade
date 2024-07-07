@@ -10,7 +10,6 @@
 //Manda informações serialmente para as matrizes
 void mandaComando(unsigned char addrs, unsigned int data){
 	unsigned int tmp = (data>>8)&0xFF;
-	unsigned int tmp2 = data&0xFF;
 	PORTD&=~(CS); //CS=0
 	for(int i=0; i<2; i++){
 		tmp = tmp|(addrs<<8);
@@ -21,7 +20,7 @@ void mandaComando(unsigned char addrs, unsigned int data){
 			PORTD&=~(CLK); //CLK=0
 			tmp = tmp<<1;
 		}
-		tmp = tmp2;
+		tmp = data&0xFF;
 	}	
 	PORTD|=(CS); //CS=1
 }
