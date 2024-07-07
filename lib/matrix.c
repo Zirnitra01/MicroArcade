@@ -1,10 +1,3 @@
-/*
- * matrix.c
- *
- * Created: 16/06/2024 14:20:05
- *  Author: Douglas Pasini
- */ 
-
 #include "matrix.h"
 
 //Manda informações serialmente para as matrizes
