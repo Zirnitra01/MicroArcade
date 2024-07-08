@@ -35,7 +35,7 @@
 #define GAMEOVER 2
 #define PAUSE 3
 
-//Definição dos tempos para as frequências da saída de audio
+//Definição dos tempos para as frequências da saída de áudio
 #define DO 19
 #define RE 42
 #define MI 66
