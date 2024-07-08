@@ -3,7 +3,7 @@ O projeto foi feito para o componente curricular de microcontroladores experimen
 
 Os códigos foram feitos utilizado o Atmel Studio e as simulações utilizaram o SimulIDE.
 
-![Simulação do circuito](images/matrixCircuit.png)
+<img src="images/matrixCircuit.png" alt="Simulação do circuito" width="400" height="500">
 
 Uma demonstração do funcionamento do jogo Tetris pode ser vista no seguinte vídeo.
 
