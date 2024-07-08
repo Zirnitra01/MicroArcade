@@ -7,4 +7,6 @@ Os códigos foram feitos utilizado o Atmel Studio e as simulações utilizaram o
 
 Uma demonstração do funcionamento do jogo Tetris pode ser vista no seguinte vídeo.
 
-[![Assista ao vídeo no YouTube](images/tetrisImage.jpg)](https://youtu.be/dNDxLwIIoHU)
+<a href="https://www.youtube.com/watch?v=dNDxLwIIoHU">
+    <img src="https://img.youtube.com/vi/dNDxLwIIoHU/maxresdefault.jpg" alt="Vídeo de Demonstração" width="480" height="270">
+</a>
