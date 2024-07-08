@@ -379,7 +379,7 @@ void breakout(){
 		dirX^=1;
 	}
 	
-	//Ainda falta adicionar as colisões nas outras direções e fazer o jogador perder quando a bolinha tocar a parte inferior	
+	//Ainda falta adicionar as colisões nas outras direções e fazer o jogador perder quando a bolinha tocar a parte inferior (assim como adicionar vidas)	
 		
 	ballMov(1,1,dirX,dirY,pec);
 	
