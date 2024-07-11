@@ -703,9 +703,9 @@ int main(void){
 
 //Estava usando para tentar colocar música no jogo
 /*
-int notaTemp=0;
-int nota = 0;
-int musica1[2][7] = {{20,42,66,77,97,113,130},{1000,2000,3000,4000,5000,6000,7000}};//o tempo tem que ser contado no outro temporizador
+int notaTemp = 0;
+int nota = 0, n = 12;
+int musica1[2][12] = {{DO,DOs,RE,REs,MI,FA,FAs,SOL,SOLs,LA,LAs,SI},{200,200,200,200,200,200,200,200,200,200,200,200}};
 
 ISR(TIMER0_OVF_vect){
 	TCNT0+=131;
@@ -713,21 +713,19 @@ ISR(TIMER0_OVF_vect){
 	if(notaTemp == 0){
 		notaTemp=musica1[1][nota];
 		nota++;
-		if(nota>=7){nota=0;}
+		if(nota>=n){nota=0;}
 	}
 	
 }
 
 ISR(TIMER2_OVF_vect){
-	TCNT2+=musica1[0][nota];
-	PORTB^=(1<<1);
+	TCNT2+=musica1[0][11-nota];
+	PORTB^=(1<<3);
 }
 
-
 int main(void){
-	int x, int y
 	//Configuração da saída de audio
-	DDRB|=(1<<1);
+	DDRB|=(1<<3);
 	PORTB|=(1<<6)|(1<<7);
 	TCCR2B|=0b00000010;
 	TIMSK2|=1;
@@ -736,8 +734,9 @@ int main(void){
 	TCNT0+=131;
 	TIMSK0|=1;
 	sei();
-	
-	while(1){
-		
+	//Configuração das entradas (botões) em pull-up
+	PORTD|=(1<<3)|(1<<4)|(1<<5)|(1<<6)|(1<<7);
+	PORTB|=(1<<0)|(1<<6)|(1<<7);
+	while(1){		
 	}
 }*/
