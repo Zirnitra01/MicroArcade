@@ -37,11 +37,16 @@
 
 //Definição dos tempos para as frequências da saída de áudio
 #define DO 19
-#define RE 42
+#define DOs 31  
+#define RE 43
+#define REs 55
 #define MI 66
 #define FA 77
+#define FAs 87
 #define SOL 97
-#define LA 113
-#define SI 130
+#define SOLs 106
+#define LA 114
+#define LAs 122
+#define SI 129
 
 #endif /* CONFIG_H_ */
